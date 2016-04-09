@@ -1,0 +1,6 @@
+[submodule "sync-gateway"]
+	path = sync-gateway
+	url = git@github.com:AurlawDocker/sync-gateway.git
+[submodule "sync-web"]
+	path = sync-web
+	url = git@github.com:AurlawDocker/sync-web.git
