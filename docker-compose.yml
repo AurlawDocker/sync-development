@@ -1,11 +1,11 @@
 web:
-  build: ./web
+  build: ./sync-web
   ports:
     - '3000:3000'
   links:
     - syncgateway
 syncgateway:
-  build: ./sync-gateway-config
+  build: ./sync-gateway
   command: /development.json
   ports:
     - '4984:4984'
