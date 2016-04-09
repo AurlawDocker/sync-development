@@ -1,0 +1,21 @@
+web:
+  image: kitchensync/web
+  ports:
+    - '3000:3000'
+  links:
+    - syncgateway
+  tags:
+    - kitchen-sync-production
+syncgateway:
+  image: kitchensync/sync-gateway
+  command: /production.json
+  ports:
+    - '4984:4984'
+  tags:
+    - kitchen-sync-production
+couchbaseserver:
+  image: couchbase/server
+  ports:
+    - '8091:8091'
+  tags:
+    - kitchen-sync-production

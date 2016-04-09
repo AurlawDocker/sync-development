@@ -1,0 +1,15 @@
+web:
+  image: kitchensync/web
+  ports:
+    - '3000:3000'
+  links:
+    - syncgateway
+  tags:
+    - kitchen-sync-staging
+syncgateway:
+  image: kitchensync/sync-gateway
+  command: /development.json
+  ports:
+    - '4984:4984'
+  tags:
+    - kitchen-sync-staging
